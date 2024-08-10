@@ -1,0 +1,342 @@
+/* ----- POPPINS FONT Link ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- VARIABLES ----- */
+:root {
+    --background-color-light: #ffffff;
+    --text-color-light: #8c8383;
+    /* --background-color-dark: #333333; */
+    --text-color-dark: rgb(153, 153, 153);
+}:root{
+    --body-color: rgb(250, 250, 250);
+    --color-white: rgb(255, 255, 255);
+
+    --text-color-second: rgb(68, 68, 68);
+    --text-color-third: rgb(30, 159, 171);
+
+    --first-color: rgb(110, 87, 224);
+    --first-color-hover: rgb(40, 91, 212);
+
+    --second-color: rgb(0, 201, 255);
+    --third-color: rgb(192, 166, 49);
+    --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+}
+
+body {
+    
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+    
+
+
+}
+
+/* body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+    
+} */
+
+/* Styles for the dark mode toggle */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+    content: "☀️";
+    margin-right: 0.5em;
+}
+
+input[type="checkbox"]:checked + label::before {
+    content: "🌙";
+}
+
+/* ----- BASE ----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----- SMOOTH SCROLL ----- */
+html{
+    scroll-behavior: smooth;
+}
+
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #bbb;
+}
+
+
+/*  GLOBAL BUTTON DESIGN */
+.btn{
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.btn>i{
+    margin-left: 10px;
+}
+.btn:hover{
+    background: var(--second-color);
+    color: var(--color-white);
+}
+
+/* ----- GLOBAL ICONS DESIGN ----- */
+i{
+    font-size: 16px;
+}
+
+/* ------- BASE -------- */
+body{
+    background: var(--body-color);
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+
+/* ----- NAVIGATION BAR ----- */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: var(--body-color);
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+} 
+header h1 {
+    
+        letter-spacing: -0.1em;
+        font-size: 4em;
+    
+}
+nav { 
+    flex-grow: 1;
+}
+nav ul {
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items:center ; 
+    width: 100%;
+}
+nav ul li {
+    list-style-type: none;
+}
+nav ul li a {
+    transition:color 0.3s;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color:rgba(0,0,0,0.7);
+}
+.nav-logo{
+   position: relative;
+}
+.nav-name{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+.nav-logo span{
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--text-color-second);
+}
+.nav-menu, .nav_menu_list{
+    display: flex;
+}
+.nav-menu .nav_list{
+    list-style: none;
+    position: relative;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 20px;
+}
+.nav-menu-btn{
+    display: none;
+}
+.nav-menu-btn i{
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* ----- MAIN BOX ----- */
+main {
+    
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.section{
+    padding: 9vw;
+    width:100%;
+    padding-block: 5em;
+    /* background-color: rgb(0.3,0.4,0.5); */
+}
+.section h2 {
+    letter-spacing: 0.2em;
+}
+
+
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 15px;
+}
+
+/* ----- ABOUT INFO ----- */
+
+#about {
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+    align-items:center;
+    
+
+}
+#portfolio > h2 {
+    font-size:4em;
+}
+
+.about-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: var(--color-white);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    border-radius: 20px;
+}
+.about-info p{
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+}
+
+/* ----- PROJECTS BOX ----- */
+.project-container{
+    margin-top: 3em;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-box{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width:46%;
+    padding:3%;
+    text-align:left; 
+    
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.project-box >div {
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.project-box h3 {
+    margin-right:10px;
+    font-size: 3em;
+}
+
+.project-box>p {
+}
+.project-box img { 
+    position:relative;
+    z-index:99;
+    margin-bottom: 3em;
+    object-fit: cover;
+    max-height: 400px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+
+    border-radius: 1em;
+}
+
+.project-box::after, .contact-info::after{
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    z-index: 1;
+}
+.project-box:hover.project-box::after,
+.contact-info:hover.contact-info::after{
+    bottom: 0;
+}
+.project-box:hover.project-box i,
+.project-box:hover.project-box h3, 
+.project-box:hover.project-box>p, 
+.project-box:hover.project-box>label{
+    color: var(--color-white);
+    z-index: 2;
+}
+
+
+/* ----- FOOTER BOX ----- */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background: #F8F8F8;
+    padding-block: 40px 60px;
+}
