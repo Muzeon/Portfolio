@@ -1,118 +1,36 @@
 /* ----- POPPINS FONT Link ----- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* ----- VARIABLES ----- */
-:root {
-    --background-color-light: #ffffff;
-    --text-color-light: #8c8383;
-    /* --background-color-dark: #333333; */
-    --text-color-dark: rgb(153, 153, 153);
-}:root{
-    --body-color: rgb(250, 250, 250);
-    --color-white: rgb(255, 255, 255);
-
-    --text-color-second: rgb(68, 68, 68);
-    --text-color-third: rgb(30, 159, 171);
-
-    --first-color: rgb(110, 87, 224);
-    --first-color-hover: rgb(40, 91, 212);
-
-    --second-color: rgb(0, 201, 255);
-    --third-color: rgb(192, 166, 49);
-    --first-shadow-color: rgba(0, 0, 0, 0.1);
-
-}
-
-body {
-    
-    background-color: var(--background-color-light);
-    color: var(--text-color-light);
-    transition: background-color 0.3s, color 0.3s;
-    
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
 
 
-}
-
-/* body.dark-mode {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-    
-} */
-
-/* Styles for the dark mode toggle */
-input[type="checkbox"] {
-    display: none;
-}
-
-input[type="checkbox"] + label {
-    cursor: pointer;
-}
-
-input[type="checkbox"] + label::before {
-    content: "☀️";
-    margin-right: 0.5em;
-}
-
-input[type="checkbox"]:checked + label::before {
-    content: "🌙";
-}
 
 /* ----- BASE ----- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', 'San serif';
 }
 
 /* ----- SMOOTH SCROLL ----- */
 html{
     scroll-behavior: smooth;
-}
-
-/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
-::-webkit-scrollbar{
-    width: 10px;
-    border-radius: 25px;
-}
-::-webkit-scrollbar-track{
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb{
-    background: #ccc;
-    border-radius: 30px;
-}
-::-webkit-scrollbar-thumb:hover{
-    background: #bbb;
+    overflow-x:hidden;
 }
 
 
-/*  GLOBAL BUTTON DESIGN */
-.btn{
-    font-weight: 500;
-    padding: 12px 20px;
-    background: #efefef;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .4s;
-}
-.btn>i{
-    margin-left: 10px;
-}
-.btn:hover{
-    background: var(--second-color);
-    color: var(--color-white);
-}
+
+
 
 /* ----- GLOBAL ICONS DESIGN ----- */
 i{
     font-size: 16px;
 }
 
-/* ------- BASE -------- */
+
 body{
-    background: var(--body-color);
+    background: rgb(245, 245, 245);
+    overflow-x:hidden;
+    
 }
 .container{
     width: 100%;
@@ -124,36 +42,59 @@ header{
     position: fixed;
     top:0;
     left:0;
+    right:0;
+    
     display: flex;
-    justify-content: space-evenly;
-    align-items:center;
+    justify-content: space-between;
+    align-items:normal;
     width: 100%;
-    height: 90px;
-    line-height: 90px;
-    background: var(--body-color);
-    padding-inline: 9vw;
+    
+    line-height: 40px;
+    background: rgb(245, 245, 245);
+    padding:  3em 9vw;
     transition: .3s;
     z-index: 100;
 } 
+/* Fix the a text so it isnt blue and underlined */
+header a{
+  text-decoration: none; 
+  color: #404040;
+}
+
+/* header font and style */
 header h1 {
     
-        letter-spacing: -0.1em;
-        font-size: 4em;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0em;
+        font-size: 3em;
+        width: 150px;
     
 }
+
+/* nav bar make it flexbox and spaced evenly */
+
 nav { 
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+   
 }
 nav ul {
     display: flex;
-    
-    justify-content: space-evenly;
+    justify-content: end;
     align-items:center ; 
-    width: 100%;
+    
 }
 nav ul li {
+    margin-left: 10vw;
     list-style-type: none;
 }
+
+/* remove a and list styles */
 nav ul li a {
     transition:color 0.3s;
     font-size: 1.2em;
@@ -170,14 +111,14 @@ nav ul li a:hover {
 .nav-name{
     font-size: 30px;
     font-weight: 600;
-    color: var(--text-color-third);
+   
 }
 .nav-logo span{
     position: absolute;
     top: -15px;
     right: -20px;
     font-size: 5em;
-    color: var(--text-color-second);
+    
 }
 .nav-menu, .nav_menu_list{
     display: flex;
@@ -188,7 +129,7 @@ nav ul li a:hover {
 }
 .nav-link{
     text-decoration: none;
-    color: var(--text-color-second);
+    
     font-weight: 500;
     padding-inline: 15px;
     margin-inline: 20px;
@@ -223,7 +164,7 @@ main {
 h3{
     font-size: 20px;
     font-weight: 600;
-    color: var(--text-color-second);
+    
     margin-bottom: 15px;
 }
 
@@ -235,74 +176,83 @@ h3{
     grid-template-columns: 1fr 1fr;
     gap:10px;
     align-items:center;
+    justify-content: center;
     
 
 }
+#about img {
+    width: 15em;
+    max-height: 70vh;
+    object-fit: initial;
+    align-items:flex-end;
+}
 #portfolio > h2 {
-    font-size:4em;
+    font-size:3em;
 }
+.elevator {
+    padding: 2em 9vw;
+    font-size: 1.5em;
+    line-height: 60px;
+}
+ 
 
-.about-info{
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-block: 30px 70px;
-    padding-inline: 20px;
-    width: 100%;
-    background: var(--color-white);
-    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
-    border-radius: 20px;
-}
-.about-info p{
-    text-align: center;
-    font-size: 15px;
-    color: #777;
-}
 
-/* ----- PROJECTS BOX ----- */
+
+/* ----- Projects ----- */
 .project-container{
     margin-top: 3em;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));grid-template-columns: auto auto;
+    
     width: 100%;
     justify-content: space-between;
-    gap: 20px;
+    gap: 2em;
+    
     flex-wrap: wrap;
 }
 .project-box{
     position: relative;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    width:46%;
-    padding:3%;
+    
+    padding:2%;
     text-align:left; 
     
-    background: var(--color-white);
+    background: white;
     border-radius: 20px;
-    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    
+    box-shadow: 2px 2px 6px 1px rgb(0,0,0,0.2);
     overflow: hidden;
 }
-.project-box >div {
+.project-box >div{
+    height: 100%;
     display:flex;
+    flex-direction: column;
     align-items:center;
     justify-content: space-between;
+    flex-wrap:wrap;
+    width:100%;
+    padding:1em;
+
+flex-wrap: wrap;
+    justify-content: center;
+}
+.project-box > div >div{
+    
+    padding:2em 1em;
+    width:80%;
+    
 }
 .project-box h3 {
     margin-right:10px;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
-.project-box>p {
-}
 .project-box img { 
     position:relative;
     z-index:99;
-    margin-bottom: 3em;
+    
     object-fit: cover;
-    max-height: 400px;
-    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    max-width: 80%;
+    box-shadow: 1px 5px 10px 2px rgba(0,0,0,0.2);
 
     border-radius: 1em;
 }
@@ -311,6 +261,7 @@ h3{
     content: "";
     position: absolute;
     bottom: -100%;
+    left:0;
     background: rgba(0,0,0,0.8);
     width: 100%;
     height: 100%;
@@ -324,8 +275,8 @@ h3{
 .project-box:hover.project-box i,
 .project-box:hover.project-box h3, 
 .project-box:hover.project-box>p, 
-.project-box:hover.project-box>label{
-    color: var(--color-white);
+.project-box:hover.project-box>label, .project-box:hover.project-box div{
+    color: white;
     z-index: 2;
 }
 
@@ -337,6 +288,38 @@ footer{
     align-items: center;
     flex-direction: column;
     row-gap: 30px;
-    background: #F8F8F8;
+    background: rgb(245, 245, 245);
     padding-block: 40px 60px;
 }
+@media screen and (max-width: 992px) {
+    #about >div {
+        position: absolute;
+        background: rgb(245, 245, 245);
+        padding: 1em;
+        max-width: 13em;
+        left: 0;
+        bottom:0;
+    }
+    #about img {
+        border-radius: 100% 100% 0 0;
+    }
+    nav ul {
+        display:none;
+    }
+    header h1{
+        font-size: 2em;
+    }
+    .project-box > div{
+        grid-template-columns: auto;
+    }
+    .project-box > div >div{
+        max-width:100%;
+        padding:2em 0;
+    }
+    .project-container {
+        grid-template-columns: auto;
+    }
+    .project-box img { 
+        max-width:100%;
+    }
+    }

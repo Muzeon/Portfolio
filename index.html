@@ -6,14 +6,16 @@
         content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
     <header>
-        <h1>Kevin Luong</h1>
+        <a href="/"><h1>Kevin Luong</h1></a>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -21,37 +23,69 @@
     <main>
         <section class="section box" id="about">
             <div>
-                <h2>About My Mama</h2>
-                <p>Hi there! I'm Kevin Luong, a cook with a passion 
-                    for transitioning into the exciting world of Media Design and UX. 
-                    Born in Toronto and raised in Woodbridge, I've spent majority of my career
-                    involved with creativity whether in the kitchen or behind a computer screen. 
-                    
-                     Cooking for people brings me joy, and now I'm eager to create engaging 
-                     and user-friendly digital experiences.</p>
+
+                <h2>About Myself</h2>
+                
+                <p>Aspiring web designer.</p>
             </div>
             <img
-                src="https://images.pexels.com/photos/2762930/pexels-photo-2762930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                src="Images/IMG_3846.png">
+        </section>
+        <section class="elevator">
+            <p>
+                Aspiring web designer with a background in culinary arts, now focused on creating visually engaging and user-friendly digital experiences. Passionate about blending creativity with technology to bring ideas to life.
+            </p>
         </section>
         <section class="section box" id="portfolio">
             <h2>Portfolio</h2>
-            <div class="project-container">
-                <div class="project-box">
-                    <div>
-                        <h3>Pop Culture Project</h3>
-                        <img
-                            src="https://images.pexels.com/photos/26861781/pexels-photo-26861781/free-photo-of-a-person-paragliding-in-the-sky-with-an-orange-parachute.jpeg">
-                    </div>
+            <div  class="project-container" x-data="{
+  projects: [
+    {
+      title: 'Pop Culture',
+      description: 'Created a HTML webpage with images using basic HTML concepts.',
+      image_url: '/Images/IMG_A1.png'
+    },
+    {
+      title: 'Literary Quotes',
+      description: 'Styling 2 literary quotes using basic CSS.',
+      image_url: '/Images/IMG_A2.png'
+    },
+    {
+      title: 'Travel Agency',
+      description: 'Utilizing HTML and CSS to design a webpage.',
+      image_url: '/Images/IMG_A3.png'
+    },
+    {
+      title: 'Javascript Story',
+      description: 'Javascript storytelling using Developer Console.',
+      image_url: '/Images/IMG_A5.png'
+    },
+    {
+      title: 'CSS Boat Animation',
+      description: 'Using CSS animations, images, and SVG to create an animated page. ',
+      image_url: '/Images/IMG_A6.png'
+    },
+    
+  ]
+}
+">
+                <template x-for="project in projects" >
+                    <div class="project-box">
+                        <div>
 
-                </div>
-                <div class="project-box">
+                            
+                            <div><h3 x-text="project.title"></h3>
+                            <span x-text="project.description"></span>
+                                
+                        </div>
+                            <img
+                            :src="project.image_url">
+
+                        </div>
                     <div>
-                        <h3>Javascript Story</h3>
-                        <img
-                            src="https://images.pexels.com/photos/25267434/pexels-photo-25267434/free-photo-of-a-man-walking-down-a-street-in-a-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                    </div>
-                    <p> </p>
-                </div>
+                </template>
+
+                
             </div>
         </section>
         <section class="section" id="contact">
