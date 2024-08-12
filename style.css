@@ -294,6 +294,7 @@ footer{
 #contact {
     display: flex;
     flex-direction: column;
+    gap:5px
 }
 #contact a {
     text-decoration: none;
